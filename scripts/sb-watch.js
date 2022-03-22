@@ -45,41 +45,41 @@ function _processFile(filePath, watchEvent) {
         return _handlePug(filePath, watchEvent);
     }
 
-    if (filePath.match(/\.scss$/)) {
-        if (watchEvent === 'change') {
-            return _handleSCSS(filePath, watchEvent);
-        }
-        return;
-    }
+    // if (filePath.match(/\.scss$/)) {
+    //     if (watchEvent === 'change') {
+    //         return _handleSCSS(filePath, watchEvent);
+    //     }
+    //     return;
+    // }
 
-    if (filePath.match(/src\/js\//)) {
-        return renderScripts();
-    }
+    // if (filePath.match(/src\/js\//)) {
+    //     return renderScripts();
+    // }
 
-    if (filePath.match(/src\/assets\//)) {
-        return renderAssets();
-    }
+    // if (filePath.match(/src\/assets\//)) {
+    //     return renderAssets();
+    // }
 
 }
 
-function _handlePug(filePath, watchEvent) {
-    if (watchEvent === 'change') {
-        if (filePath.match(/includes/) || filePath.match(/mixins/) || filePath.match(/\/pug\/layouts\//)) {
-            return _renderAllPug();
-        }
-        return renderPug(filePath);
-    }
-    if (!filePath.match(/includes/) && !filePath.match(/mixins/) && !filePath.match(/\/pug\/layouts\//)) {
-        return renderPug(filePath);
-    }
-}
+// function _handlePug(filePath, watchEvent) {
+//     if (watchEvent === 'change') {
+//         if (filePath.match(/includes/) || filePath.match(/mixins/) || filePath.match(/\/pug\/layouts\//)) {
+//             return _renderAllPug();
+//         }
+//         return renderPug(filePath);
+//     }
+//     if (!filePath.match(/includes/) && !filePath.match(/mixins/) && !filePath.match(/\/pug\/layouts\//)) {
+//         return renderPug(filePath);
+//     }
+// }
 
-function _renderAllPug() {
-    console.log('### INFO: Rendering All');
-    _.each(allPugFiles, (value, filePath) => {
-        renderPug(filePath);
-    });
-}
+// function _renderAllPug() {
+//     console.log('### INFO: Rendering All');
+//     _.each(allPugFiles, (value, filePath) => {
+//         renderPug(filePath);
+//     });
+// }
 
 function _handleSCSS() {
     renderSCSS();
