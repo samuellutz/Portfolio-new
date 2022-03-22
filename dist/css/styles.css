@@ -11,12 +11,12 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
  #con {
-   justify-content:center;
-   display:flex;
-   white-space: nowrap;
-   text-align:center;
-  padding-left: 3.5rem;
- }
+  justify-content:center;
+  display:flex;
+  white-space: nowrap;
+  text-align:center;
+ padding-left: 3.5rem;
+}
 :root {
   --bs-blue: #0d6efd;
   --bs-indigo: #6610f2;
