@@ -345,7 +345,7 @@ button {
   border-radius: 0;
 }
 
-button:focus(:focus-visible) {
+button:focus:not(:focus-visible) {
   outline: 0;
 }
 
@@ -367,6 +367,9 @@ select {
 
 .button {
   border: none;
+  position: absolute;
+  position: relative;
+  position:center;
   display: inline-block;
   outline: 0;
   padding: 8px 16px;
@@ -381,7 +384,7 @@ select {
   .button:hover {
     opacity: .5;
     background-color: transparent; }
-
+    
 [role=button] {
   cursor: pointer;
 }
